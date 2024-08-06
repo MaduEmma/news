@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        img  {
+            max-width: 100%;
+        }
+        .gallery-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+        .gallery-panel {
+            flex: 1;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: flex 0.5s ease-in-out;
+        }
+        .gallery-panel:hover {
+            flex: 2.5;
+        }
+    </style>
+</head>
+<body>
+<div class="gallery">
+    <div class="gallery-panel">
+        <img src="pexels-pixabay-459335.jpg" alt="">
+    </div>
+    <div class="gallery-panel">
+        <img src="pexels-rovenimages-com-344613-949587.jpg" alt="">
+    </div>
+    <div class="gallery-panel">
+        <img src="pexels-pixabay-235986.jpg" alt="">
+    </div>
+    <div class="gallery-panel">
+        <img src="photo_2024-07-11 07.41.59.jpeg" alt="">
+    </div>
+    <div class="gallery-panel">
+        <img src="photo_2024-07-11 08.05.36.jpeg" alt="">
+</div>
+</body>
+</html>

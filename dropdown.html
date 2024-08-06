@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        body {
+            /*background: linear-gradient(#ed4264 0%, #4776e6 2%, #ffedbc 100%);*/
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            height: 100vh;
+            animation: gradient 5s ease infinite;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100%  {
+                background-position: 0% 50%;
+            }
+        }
+        .dropbtn {
+            background-color: orange;
+            color: blue;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: tomato;
+            min-height: 160px;
+            box-shadow: 0px 8px 16px 0px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: yellow;
+            padding: 12px 12px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+           background-color: lightblue
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: lightgreen;
+        }
+        .dropdown-content {
+            opacity: 0;
+            transition: opacity 0.10s;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        @media screen and (max-width: 600px) {
+            .dropbtn {
+                width: 100%;
+            }
+            .dropdown-content {
+                position: relative;
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Dropdown</h2>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="">Home</a>
+            <a href="">Skills</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
